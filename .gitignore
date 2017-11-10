@@ -1,0 +1,18 @@
+# OS generated files #
+######################
+.directory
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+bin
+build
+
+# Intellij Project Files
+######################
+.idea
+*.iml
+*.ipr
+*.iws
+atlassian-ide-plugin.xml
+out/
