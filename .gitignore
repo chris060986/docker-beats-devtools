@@ -16,3 +16,6 @@ build
 *.iws
 atlassian-ide-plugin.xml
 out/
+
+# Python virtualenv files
+env
