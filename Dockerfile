@@ -12,7 +12,6 @@ WORKDIR /opt/beats-5.6.2/dev-tools/
 
 RUN virtualenv env
 RUN . env/bin/activate
-RUN python --version
 RUN pip install elasticsearch
 
 # export
