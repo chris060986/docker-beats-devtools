@@ -5,7 +5,8 @@ USER root
 
 RUN yum clean all && \
         yum -y install epel-release && \
-        yum install -y python-pip python-wheel python-virtualenv
+        yum install -y python-pip python-wheel python-virtualenv && \
+        pip install --upgrade pip
 
 RUN curl -SL https://github.com/elastic/beats/archive/v5.6.2.tar.gz \
     | tar -xz -C /opt/
