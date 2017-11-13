@@ -5,7 +5,7 @@ USER root
 
 RUN yum clean all && \
         yum -y install epel-release && \
-        yum install -y ssh python-pip python-wheel python-virtualenv && \
+        yum install -y openssh python-pip python-wheel python-virtualenv && \
         pip install --upgrade pip
 
 RUN curl -SL https://github.com/elastic/beats/archive/v5.6.2.tar.gz \
@@ -22,4 +22,4 @@ RUN . env/bin/activate
 WORKDIR /opt/beats-5.6.2/filebeat/
 
 # export
-RUN python ../dev-tools/export_dashboards.py --regex Packetbeat*
+#RUN python ../dev-tools/export_dashboards.py --regex Packetbeat*
