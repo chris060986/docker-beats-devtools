@@ -7,5 +7,3 @@ RUN curl -SL https://github.com/elastic/beats/archive/v5.6.2.tar.gz \
 WORKDIR /tmp/beats-5.6.2/filebeat/
 
 RUN make python-env
-
-RUN ../dev-tools/export_dashboards.py --regex Packetbeat*
