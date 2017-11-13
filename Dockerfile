@@ -3,7 +3,7 @@ MAINTAINER chris060986@github.com
 
 USER root
 
-RUN yum install -y python-pip
+RUN yum install -y python2-pip
 RUN pip install virtualenv
 
 RUN curl -SL https://github.com/elastic/beats/archive/v5.6.2.tar.gz \
