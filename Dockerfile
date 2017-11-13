@@ -1,6 +1,8 @@
 FROM centos/python-27-centos7
 MAINTAINER chris060986@github.com
 
+USER root
+
 RUN yum install -y python-pip
 RUN pip install virtualenv
 
