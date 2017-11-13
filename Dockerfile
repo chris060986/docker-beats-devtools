@@ -1,6 +1,11 @@
 FROM centos:centos7
 MAINTAINER chris060986@github.com
 
+ENV elasticsearch_url http://localhost:9200
+ENV regex *
+ENV kibana .kibana
+ENV dir /var/json/
+
 USER root
 
 RUN yum clean all && \
@@ -22,4 +27,4 @@ RUN . env/bin/activate
 WORKDIR /opt/beats-5.6.2/filebeat/
 
 # export
-#RUN python ../dev-tools/export_dashboards.py --regex Packetbeat*
+RUN python ../dev-tools/export_dashboards.py --regex ${regex} --url ${elasticsearch_url} --kibana ${kibana} --dir ${dir}
