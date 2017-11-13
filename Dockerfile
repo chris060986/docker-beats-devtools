@@ -1,6 +1,8 @@
 FROM centos/python-27-centos7
 MAINTAINER chris060986@github.com
 
+RUN pip install virtualenv
+
 RUN curl -SL https://github.com/elastic/beats/archive/v5.6.2.tar.gz \
     | tar -xz -C /tmp/
 
