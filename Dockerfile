@@ -12,7 +12,7 @@ WORKDIR /opt/beats-5.6.2/dev-tools/
 
 RUN virtualenv env
 RUN . env/bin/activate
-RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt
 
 # export
 #RUN . env/bin/activate
