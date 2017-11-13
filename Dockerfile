@@ -8,8 +8,12 @@ RUN yum install -y python-virtualenv
 RUN curl -SL https://github.com/elastic/beats/archive/v5.6.2.tar.gz \
     | tar -xz -C /tmp/
 
-WORKDIR /tmp/beats-5.6.2/filebeat/
+WORKDIR /tmp/beats-5.6.2/dev-tools/
 
 RUN virtualenv env
 RUN . env/bin/activate
 RUN pip install -r requirements.txt
+
+# export
+#RUN . env/bin/activate
+#RUN python ../dev-tools/export_dashboards.py --regex Packetbeat*
