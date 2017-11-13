@@ -27,4 +27,4 @@ RUN . env/bin/activate
 WORKDIR /opt/beats-5.6.2/filebeat/
 
 # export
-RUN python ../dev-tools/export_dashboards.py --regex ${regex} --url ${elasticsearch_url} --kibana ${kibana} --dir ${dir}
+CMD python ../dev-tools/export_dashboards.py --url ${elasticsearch_url} --regex ${regex} --kibana ${kibana} --dir ${dir}
