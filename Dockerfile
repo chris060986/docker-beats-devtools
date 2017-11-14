@@ -24,4 +24,6 @@ RUN . env/bin/activate
 WORKDIR /opt/beats-5.6.2/filebeat/
 
 # export
-CMD python ../dev-tools/export_dashboards.py --url ${elasticsearch_url} --regex ${regex} --kibana ${kibana} --dir ${dir}
+#CMD python ../dev-tools/export_dashboards.py --url ${elasticsearch_url} --regex ${regex} --kibana ${kibana} --dir ${dir}
+ENTRYPOINT["python", "../dev-tools/export_dashboards.py"]
+CMD ["--url", "http://localhost:9200", "--regex", "'.*'", "--kibana", ".kibana", "--dir", "/var/data"]
