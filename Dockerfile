@@ -1,12 +1,7 @@
 FROM centos:centos7
 MAINTAINER chris060986@github.com
 
-ENV elasticsearch_url http://localhost:9200
-ENV regex '.*'
-ENV kibana .kibana
-ENV dir /data/
-
-VOLUME /data
+VOLUME /var/data
 
 USER root
 
